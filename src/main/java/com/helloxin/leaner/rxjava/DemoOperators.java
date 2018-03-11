@@ -11,6 +11,20 @@ public class DemoOperators {
 
     public static void main(String[] args) {
 
+        Observable.just("Hello, xin!")
+                .map(new Func1<String, String>() {
+                    @Override
+                    public String call(String s) {
+                        return s + " -ye";
+                    }
+                })
+                .subscribe(s -> System.out.println(s));
+
+        Observable.just("Hello, xin!")
+                .map(s -> s + " -ye")
+                .subscribe(s -> System.out.println(s));
+
+
         Observable.just("hello xin").map(new Func1<String, Object>() {
 
             @Override
