@@ -101,6 +101,6 @@ public class DemoPart3 {
     public static void main(String[] args) throws InterruptedException {
 
         DemoPart3 demoPart3 = new DemoPart3();
-        demoPart3.asyncSubject();
+        demoPart3.behaviorSubject();
     }
 }
