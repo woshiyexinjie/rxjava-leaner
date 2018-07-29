@@ -1,6 +1,7 @@
 package com.helloxin.leaner.rxjava.concept;
 
 import rx.Observable;
+import rx.Subscriber;
 import rx.functions.Action1;
 import rx.schedulers.Schedulers;
 
@@ -38,8 +39,34 @@ public class BackPressure {
 
     public static void main(String[] args) throws IOException {
 
-        BackPressure backPressure = new BackPressure();
-        backPressure.outPressure();
+//        BackPressure backPressure = new BackPressure();
+//        backPressure.outPressure();
+
+        Observable observable=Observable.range(1,100000);
+
+        Subscriber<String> mySubscriber = new Subscriber<String>() {
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+
+            }
+
+            @Override
+            public void onNext(String s) {
+                System.out.println(s);
+            }
+        };
+        observable.subscribe(mySubscriber);
+
+        System.in.read();
+
+
 
     }
+
 }
+
