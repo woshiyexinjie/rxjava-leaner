@@ -2,6 +2,9 @@ package com.helloxin.leaner.rxjava;
 
 import rx.Observable;
 
+import javax.management.Attribute;
+import javax.management.AttributeList;
+import javax.management.relation.Role;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
@@ -73,7 +76,14 @@ public class ZipDemo {
 
     public static void main(String[] args) throws IOException {
 
-        ZipDemo zipDemo = new ZipDemo();
-        zipDemo.combineLatestTest();
+//        ZipDemo zipDemo = new ZipDemo();
+//        zipDemo.combineLatestTest();
+        AttributeList attributeList = new AttributeList();
+        Attribute attribute = new Attribute("III","123");
+        attributeList.add(attribute);
+        attributeList.add("HHH");
+//        attributeList.asList();
+        System.out.println(attributeList);
+
     }
 }
