@@ -3,6 +3,7 @@ package com.helloxin.leaner.rxjava;
 import rx.Observable;
 
 import java.io.IOException;
+import java.util.AbstractQueue;
 import java.util.concurrent.TimeUnit;
 
 /**
