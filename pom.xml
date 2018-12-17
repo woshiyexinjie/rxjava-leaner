@@ -40,6 +40,20 @@
       <artifactId>akka-actor_2.12</artifactId>
       <version>2.5.14</version>
     </dependency>
+
+
+    <!-- 加上reactor 依赖-->
+    <dependency>
+      <groupId>io.projectreactor</groupId>
+      <artifactId>reactor-core</artifactId>
+      <version>3.1.4.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>io.projectreactor</groupId>
+      <artifactId>reactor-test</artifactId>
+      <version>3.1.4.RELEASE</version>
+    </dependency>
+
   </dependencies>
 
 
